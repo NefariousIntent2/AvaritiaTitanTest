@@ -72,6 +72,7 @@ public class ItemSwordInfinity extends ItemSword implements ICosmicRenderItem, I
             if (victim.capabilities.isCreativeMode && !victim.isDead && victim.getHealth() > 0 && !AvaritiaEventHandler.isInfinite(victim)) {
                 victim.getCombatTracker().trackDamage(new DamageSourceInfinitySword(player), victim.getHealth(), victim.getHealth());
                 victim.setHealth(0);
+                victim.setTitanHealth(0);
                 victim.onDeath(new EntityDamageSource("infinity", player));
                 //TODO
                 //player.addStat(Achievements.creative_kill, 1);
