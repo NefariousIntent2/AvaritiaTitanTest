@@ -59,6 +59,7 @@ public class ItemSwordInfinity extends ItemSword implements ICosmicRenderItem, I
 
         victim.recentlyHit = 60;
         victim.getCombatTracker().trackDamage(new DamageSourceInfinitySword(player), victim.getHealth(), victim.getHealth());
+        victim.setTitanHealth(0);
         victim.setHealth(0);
         victim.onDeath(new EntityDamageSource("infinity", player));
         return true;
